@@ -3,15 +3,15 @@ import XCTest
 
 class KeychainWithPrefixTests: XCTestCase {
   
-  var prefixed: KeychainSwift!
-  var nonPrefixed: KeychainSwift!
+  var prefixed: KeychainSwiftHelper!
+  var nonPrefixed: KeychainSwiftHelper!
 
   
   override func setUp() {
     super.setUp()
     
-    prefixed = KeychainSwift(keyPrefix: "test_prefix_")
-    nonPrefixed = KeychainSwift()
+    prefixed = KeychainSwiftHelper(keyPrefix: "test_prefix_")
+    nonPrefixed = KeychainSwiftHelper()
     
     prefixed.clear()
     nonPrefixed.clear()
